@@ -64,6 +64,7 @@ module.exports = {
     createReview,
     createThemePark,
     getAllParks,
-    deleteReview
+    deleteReview,
+    getParkByID
 }
 
