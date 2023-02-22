@@ -8,7 +8,7 @@ const ThemePark = new Schema(
     description: { type: String, required: true },
     price: { type: String, required: false },
     image: { type: String, required: true },
-    review: [{ type: Schema.Types.ObjectId, ref: 'Review', required: true }]
+    review: [{ type: Schema.Types.ObjectId, ref: 'Review', required: false }]
   },
   { timestamps: true }
 )
