@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './pages/Home'
 import ParkList from './pages/ParkList';
+import ParkDetails from './components/ParkDetails';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/themeParks" element={<ParkList />} />
+					<Route path="themeParks/:id" element={<ParkDetails />} />
 				</Routes>
 			</main>
 		</div>
