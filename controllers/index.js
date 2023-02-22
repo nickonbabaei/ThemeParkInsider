@@ -39,7 +39,7 @@ const getParkById = async (req, res) => {
 const getReviewById = async (req, res) => {
   try {
     const { id } = req.params
-    const review = await Review.findById(id)
+    const review = await Review.findById(id).populate('review')
     if (review) {
        return res.status(200).json({ review })
     }
@@ -62,15 +62,12 @@ const getReviewById = async (req, res) => {
 
 const createReview = async (req, res) => {
   try {
-    console.log(req.body)
+    const parkId = req.params.id
     const review = await new Review(req.body)
     await review.save()
-    if (req.body.themePark) {
-      const themePark = await ThemePark.findById(req.body.themePark)
-      themePark.reviews.push(review._id)
-      await themePark.save()
-    }
-
+    const park = await ThemePark.findById(parkId)
+    park.review.push(review._id)
+    // await ThemePark.findByIdAndUpdate(parkId, park)
     return res.status(201).json({
       review,
     })
@@ -78,6 +75,8 @@ const createReview = async (req, res) => {
     return res.status(500).json({error: error.message})
   }
 }
+
+
 
 // Nickon
 // const createReview = async (req, res) => {

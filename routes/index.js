@@ -14,7 +14,7 @@ router.get('/themeParks', controllers.getAllParks)
 
 // Get parks by id (passed)
 router.get('/themeParks/:id', controllers.getParkById)
-// Get Reviews by ID 
+// Get Reviews by ID (passed insomnia test)
 router.get('/reviews/:id', controllers.getReviewById)
 
 
