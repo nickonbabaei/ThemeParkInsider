@@ -13,7 +13,7 @@ nav a{
   padding: 0 10px;
   text-decoration: none;
   font-size: 1.5rem;
-  /* margin-top: 40px; */
+  margin-top: 20px;
   font-family: 'Scope One', serif;
 
 }
@@ -21,4 +21,5 @@ nav a{
 nav .logo{
   float: left;
   color: #e2970c;
+  
 }
