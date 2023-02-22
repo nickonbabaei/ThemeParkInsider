@@ -7,12 +7,12 @@ const ParkList = () => {
 
     const [parks, setParks] = useState([])
 
-    const getParks = async () => {
-        const response = await axios.get(`http://localhost:3001/api/themePark`)
-        setParks(response.data.parks)
-    }
-
     useEffect(() => {
+        const getParks = async () => {
+            const response = await axios.get(`http://localhost:3001/api/themeParks`)
+            setParks(response.data.parks)
+            // console.log(response.data.parks)
+        }
         getParks()
     }, [])
 
@@ -23,7 +23,7 @@ const ParkList = () => {
                 {parks.map((park) => (
                     <ParkCard
                         key={park._id}
-                        objectId={park._id}
+                        {...park}
                         name={park.name}
                         image={park.image}
                     />
