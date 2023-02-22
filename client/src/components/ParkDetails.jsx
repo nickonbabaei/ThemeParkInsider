@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
+import ReviewCard from './ReviewCard'
 
 const ParkDetails = (props) => {
 
@@ -18,7 +19,8 @@ const ParkDetails = (props) => {
     }
     getParkById()
   }, [id])
-  // console.log(park) //pass test
+  console.log(park) //pass test
+  console.log(park.reviews)
 
   // const deleteReview = async () => {
   //   const response = await axios.delete(`http://localhost:3001/api/deleteReview/${}`)
@@ -28,6 +30,11 @@ const ParkDetails = (props) => {
     <div className='container'>
       <div className='details'>
         <h1>{park.name}</h1>
+        <h3>{park.location}</h3>
+        <img alt='park img' src={park.image} />
+        <p>Description: {park.description}</p>
+        <h5>Price: {park.price}</h5>
+       
       </div>
     </div>
   ) : null
