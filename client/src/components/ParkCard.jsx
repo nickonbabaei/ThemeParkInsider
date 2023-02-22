@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const ParkCard = (name, image, objectId,) => {
+const ParkCard = (name, image, objectId) => {
 
     return (
         <Link to={`/themeParks/${objectId}`}>
@@ -9,7 +9,7 @@ const ParkCard = (name, image, objectId,) => {
                 <img src={image} alt={image} />
             </div>
             <div className='info-wrapper flex-col'>
-                <h3>{name}</h3>
+                {name}
             </div>
         </div>
         </Link>

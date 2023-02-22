@@ -8,7 +8,7 @@ const ParkList = () => {
     const [parks, setParks] = useState([])
 
     const getParks = async () => {
-        const response = await axios.get(`http://localhost:3001/api/themePark`)
+        const response = await axios.get(`http://localhost:3001/api/themeParks`)
         setParks(response.data.parks)
     }
 
