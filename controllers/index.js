@@ -6,9 +6,11 @@ const createThemePark = async (req, res) => {
     try {
         const themePark = await new ThemePark(req.body)
         await themePark.save()
-        return res.json(review)
+        return res.status(201).json({
+          themePark,
+        });
     } catch (err) {
-        return res.json({ msg: err.message })
+        return res.status(500).json({ msg: err.message })
     }
 }
 
