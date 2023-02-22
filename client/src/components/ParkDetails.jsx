@@ -21,7 +21,7 @@ const ParkDetails = (props) => {
     getParkById()
   }, [id])
   // console.log(park) //pass test
-  console.log(park.reviews)
+  // console.log(park.review)
 
 
   
@@ -37,7 +37,7 @@ const ParkDetails = (props) => {
         <h5>Price: {park.price}</h5>
        <h3>Reviews</h3>
        <section>
-        {park.reviews.map((rev) => 
+        {park.review.map((rev) => 
           <p>{rev.comment}</p>
          )}
        </section>
