@@ -13,4 +13,4 @@ const ThemePark = new Schema(
   { timestamps: true }
 )
 
-module.exports = mongoose.model('ThemePark', ThemePark)
+module.exports = ThemePark
