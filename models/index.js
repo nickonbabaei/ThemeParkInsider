@@ -8,5 +8,4 @@ const ThemePark = mongoose.model('ThemePark', themePark)
 module.exports = {
   Review,
   ThemePark
-
 }
