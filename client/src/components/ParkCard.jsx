@@ -1,18 +1,18 @@
-import { Link } from 'react-router-dom'
 
-const ParkCard = (name, image, objectId) => {
+const ParkCard = (props) => {
 
     return (
-        <Link to={`/themeParks/${objectId}`}>
-        <div className='park-card'>
+        <div className="container-grid">
+            <div className='card park-card' key={props.key} onClick={props.onClick}>
             <div className='img-wrapper'>
-                <img src={image} alt={image} />
+                <img src={props.image} alt="park img" />
             </div>
             <div className='info-wrapper flex-col'>
-                {name}
+                <h3>{props.name}</h3>
             </div>
         </div>
-        </Link>
+        </div>
+       
     )
 }
 
