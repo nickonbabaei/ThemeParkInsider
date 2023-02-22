@@ -13,12 +13,12 @@ const ParkDetails = (props) => {
   useEffect(() => {
     const getParkById = async () => {
       const response = await axios.get(`http://localhost:3001/api/themeParks/${id}`)
-      console.log(response.data.themePark)
+      // console.log(response.data.themePark)
       setPark(response.data.themePark)
     }
     getParkById()
   }, [id])
-  console.log(park) //pass test
+  // console.log(park) //pass test
 
   // const deleteReview = async () => {
   //   const response = await axios.delete(`http://localhost:3001/api/deleteReview/${}`)
@@ -27,7 +27,7 @@ const ParkDetails = (props) => {
   return park ? (
     <div className='container'>
       <div className='details'>
-        <h1></h1>
+        <h1>{park.name}</h1>
       </div>
     </div>
   ) : null
