@@ -3,9 +3,8 @@ const Schema = mongoose.Schema
 
 const Review = new Schema(
     {
-        userName: { type: String, required: false },
         comment: { type: String, required: true },
-        rating: { type: String, required: false },
+        rating: { type: String, required: false }
     },
     { timestamps: true },
 )
