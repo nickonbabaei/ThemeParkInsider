@@ -8,18 +8,29 @@ const ParkDetails = (props) => {
   const [park, setPark] = useState('')
 
   let { id } = useParams()
-  console.log(id)
+  // console.log(id) theme park id 
 
   useEffect(() => {
-    const getParksById = async () => {
+    const getParkById = async () => {
       const response = await axios.get(`http://localhost:3001/api/themeParks/${id}`)
-      console.log(response.data.sneaker)
+      console.log(response.data.themePark)
+      setPark(response.data.themePark)
     }
-  })
+    getParkById()
+  }, [id])
+  console.log(park) //pass test
+
+  // const deleteReview = async () => {
+  //   const response = await axios.delete(`http://localhost:3001/api/deleteReview/${}`)
+  // }
   
-  return (
-    <div>ParkDetails</div>
-  )
+  return park ? (
+    <div className='container'>
+      <div className='details'>
+        <h1></h1>
+      </div>
+    </div>
+  ) : null
 }
 
 export default ParkDetails
