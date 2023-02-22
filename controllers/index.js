@@ -10,16 +10,16 @@ const createThemePark = async (req, res) => {
           themePark,
         });
     } catch (err) {
-        return res.status(500).json({ msg: err.message })
+        return res.status(500).json({ error: err.message })
     }
 }
 
 const getAllParks = async (req, res) => {
     try {
         const parks = await ThemePark.find()
-        return res.json(parks)
+        return res.status(200).json({ parks })
     } catch(err) {
-        res.send({ msg: err.message })
+        res.status(500).send(err.message)
     }
 }
 
@@ -27,9 +27,9 @@ const getParkByID = async (req, res) => {
     try {
         const parkID = req.params.id
         const park = await ThemePark.findById(parkID).populate('review')
-        return res.json(park)
+        return res.status(200).json({ park })
     } catch (err) {
-        res.json({msg: err.message})
+        res.status(500).send(err.message)
     }
 }
 
@@ -41,25 +41,24 @@ const createReview = async (req, res) => {
       const park = await ThemePark.findById(parkID)
       park.review.push(review._id)
     //   await Story.findByIdAndUpdate(storyId, story)
-      return res.status(201).json(review)
+      return res.status(201).json({ review })
     } catch (err) {
-      return res.status(500).json({ msg: err.message })
+      return res.status(500).json(err.message)
     }
   }
 
   const deleteReview = async (req, res) => {
     try {
-      const id = req.params.id
-      await Comment.findByIdAndDelete(id)
+      const { id } = req.params.id
+      const deleted = await Comment.findByIdAndDelete(id)
+      if (deleted) {
+        return res.status(200).send("Review Deleted!")
+      }
+      throw new Error('Review not found')
     } catch (err) {
-      return res.send({msg: err.message})
+      return res.status(500).send(err.message)
     }
   }
-
-
-
-
-
 
 
 module.exports = {
