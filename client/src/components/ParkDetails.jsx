@@ -22,21 +22,10 @@ const ParkDetails = (props) => {
   }, [id])
   // console.log(park) //pass test
   console.log(park.reviews)
+
+
   
-  // let reviews = park.reviews
-  // console.log(reviews)
   
-  // useEffect(() => {
-  //   const getReviewsById = async () => {
-  //     const response = await axios.get(`http://localhost:3001/api/reviews/${id}`)
-  //     // console.log(response.data.themePark)
-  //     setPark(response.data.themePark)
-  //   }
-  //   // getReviewsById()
-  // }, [])
-  // const deleteReview = async () => {
-  //   const response = await axios.delete(`http://localhost:3001/api/deleteReview/${}`)
-  // }
   
   return park ? (
     <div className='container'>
