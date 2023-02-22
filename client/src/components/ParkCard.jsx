@@ -3,7 +3,7 @@ const ParkCard = (props) => {
 
     return (
         <div className="container-grid">
-            <div className='card park-card' key={props.key} onClick={props.onClick}>
+            <div className='card park-card' onClick={props.onClick}>
             <div className='img-wrapper'>
                 <img src={props.image} alt="park img" />
             </div>
