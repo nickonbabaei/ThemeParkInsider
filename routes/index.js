@@ -15,7 +15,7 @@ router.get('/themeParks', controllers.getAllParks)
 // Get parks by id
 router.get('/themeParks/:id', controllers.getParkByID)
 
-// delete sneaker***
+// delete review***
 router.delete('/deleteReview/:id', controllers.deleteReview)
 
 
