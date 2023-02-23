@@ -4,10 +4,11 @@ const controllers = require('../controllers')
 // Test (passed)
 router.get('/', (req, res) => res.send('This is root howdy hey !'))
 
+router.post('/themePark/:id/review', controllers.createReview)
 // Create ThemePark (passed)
 router.post('/themePark', controllers.createThemePark)
 // Create Review (passed)
-router.post('/themePark/review', controllers.createReview)
+
 
 // Get All Parks (passed)
 router.get('/themeParks', controllers.getAllParks)

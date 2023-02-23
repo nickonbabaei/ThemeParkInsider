@@ -89,8 +89,10 @@ const createReview = async (req, res) => {
       const review = await new Review(req.body)
       await review.save()
       const park = await ThemePark.findById(parkID)
+      // console.log(review)
+      // console.log(park.review)
       park.review.push(review._id)
-    //   await Story.findByIdAndUpdate(storyId, story)
+      await ThemePark.findByIdAndUpdate(parkID, park)
       return res.status(201).json({ review })
     } catch (err) {
       return res.status(500).json(err.message)
