@@ -2,6 +2,7 @@ import ParkCard from "../components/ParkCard"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import axios from 'axios'
+import '../styles/parkList.css'
 
 
 const ParkList = () => {
@@ -19,7 +20,7 @@ const ParkList = () => {
 
     return (
         <div className="park-list">
-            <h1>Parks</h1>
+            <h1 className="header">Theme Parks</h1>
             <section className="container-grid">
                 {parks.map((park) => (
                     <Link to={`/themeParks/${park._id}`} >
