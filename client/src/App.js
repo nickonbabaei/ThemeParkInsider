@@ -1,5 +1,5 @@
 // import { Router } from 'express';
-import './App.css'
+import './styles/App.css'
 import { Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './pages/Home'

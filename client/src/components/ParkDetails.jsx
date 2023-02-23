@@ -2,7 +2,6 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
-import ReviewCard from './ReviewCard'
 import ReviewForm from './ReviewForm'
 
 const ParkDetails = (props) => {
