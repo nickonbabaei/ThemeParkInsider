@@ -1,0 +1,29 @@
+.header {
+  color: hsl(0, 17%, 98%);
+  font-size: 6rem!important;
+  font-weight: bold!important;
+  font-family: monospace;
+  letter-spacing: 7px!important;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.header {
+  padding: 1.5rem;
+  background: linear-gradient(to right, hsl(323, 72%, 65%) 0, hsl(295, 23%, 97%) 15%, hsl(261, 76%, 45%) 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}

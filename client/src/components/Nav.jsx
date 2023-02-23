@@ -6,9 +6,9 @@ const Nav = () => {
     <div className="logo">
       <h1>Theme Park Insider</h1>
     </div>
-			<Link to="/">Home</Link>
-      		<Link to="/themeParks">Theme Parks</Link>
 			<Link to="/about">About</Link>
+			<Link to="/themeParks">Theme Parks</Link>
+			<Link to="/">Home</Link>
 		</nav>
 	)
 }

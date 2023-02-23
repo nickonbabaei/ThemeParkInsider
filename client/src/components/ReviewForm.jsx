@@ -21,14 +21,14 @@ const ReviewForm = ({handleChange, handleSubmit, review}) => {
       <form onSubmit={handleSubmit}>
 
         <label htmlFor="comment"></label>
-        <textarea
+        <input
           id="comment"
           cols="30"
           rows="10"
           placeholder="Comment"
           onChange={handleChange}
           value={review.comment}
-        ></textarea>
+        ></input>
 
         <label htmlFor="rating"></label>
         <input
