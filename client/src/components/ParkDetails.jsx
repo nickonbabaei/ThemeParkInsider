@@ -13,22 +13,17 @@ const ParkDetails = (props) => {
 
   const [review, setReview] = useState(initialState)
   const [park, setPark] = useState('')
-  // const [reviews, setReviews] = useState('')
 
   let { id } = useParams()
-  // console.log(id) theme park id 
 
   const getParkById = async () => {
     const response = await axios.get(`http://localhost:3001/api/themeParks/${id}`)
-    // console.log(response.data.themePark)
     setPark(response.data.themePark)
   }
 
   useEffect(() => {
     getParkById()
   }, [id])
-  // console.log(park) //pass test
-  // console.log(park.review)
 
   const handleReviewChange = (evt) => {
     setReview({ ...review, [evt.target.id]: evt.target.value })
@@ -46,9 +41,6 @@ const ParkDetails = (props) => {
     getParkById()
   }
 
-  
-  
-  
   return park ? (
     <div className='details-container'>
       <div className='details'>
