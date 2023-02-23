@@ -17,17 +17,21 @@ nav a{
   float: right;
   color: #9069c7;
   text-align: center;
-  padding: 0 10px;
+  padding: 2rem 10px;
   text-decoration: none;
   font-size: 1.5rem;
   margin: 30px 5px 0 0;
   font-family: 'Scope One', serif;
 }
+nav a:hover{
+  background-color: rgb(171, 96, 225);
+  color: rgb(95, 150, 217);
+}
 
 nav .logo{
   float: left;
   color: #e9e7e3;
-  /* margin-left: 1rem; */
+  margin-top: 2rem;
   font-family: 'Great Vibes', cursive;
   font-size: 1.3rem;
   width: 25%;
@@ -93,8 +97,9 @@ nav .logo{
   font-size: 30px;
 }
 .park-img {
-  border: 10px solid rgb(199, 134, 210);
-  width: 600px;
+  /* border: 10px solid rgb(199, 134, 210); */
+  border-radius: 5%;
+  width: 700px;
   margin: auto;
   background-color: rgb(249, 215, 220);
 }
@@ -119,10 +124,10 @@ nav .logo{
   width: 75%;
   margin: 1rem 0 1rem 10rem;
   padding: 1rem 0 3rem 0;
-  /* display: grid; */
+  display: grid;
 }
 .reviews span{
-  color: rgb(124, 11, 238);
+  color: rgb(45, 5, 223);
   font-size: 1.5rem;
   /* font-size: 1rem; */
 }
@@ -151,4 +156,135 @@ nav .logo{
 input{
   width:30%;
   height: 20%;
+}
+
+/* home page */
+.tittle-cont{
+margin-bottom: 0;
+padding: 0;
+}
+.tittle{
+  width: 70%;
+}
+
+.video-cont{
+}
+video{
+  width: 30rem;
+}
+video:hover {
+  opacity: 0.9;
+  box-shadow: 0px 30px 35px rgb(214, 142, 193)
+}
+.video-cont1{
+  display: flex;
+  justify-content: flex-start;
+}
+.video-cont2{
+  display: flex;
+  justify-content: flex-end;
+}
+.videos{
+  margin: 0 2rem 3rem 2rem;
+}
+
+.welcome{
+  /* background-color: rgba(147, 145, 140, 0.4); */
+  width: 75%;
+  display: inline-block;
+  padding-bottom: 2rem;
+}
+.welcome h1{
+  font-size: 4rem;
+  font-family: 'Gloock', serif;
+  color: #d2ccdb;
+}
+.welcome h2{
+  font-size: 2rem;
+}
+
+/*  */
+ 
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+  .gfg-div {
+    background-color: #63c971;
+    color: #fff;
+  }
+}
+ 
+/* For Tablet View */
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+  .gfg-div {
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    color: black;
+  }
+}
+ 
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px)
+and (orientation: portrait) {
+  .gfg-div {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: #fff;
+  }
+}
+ 
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px)
+and (orientation: landscape) {
+  .gfg-div {
+    width: 400px;
+    height: 200px;
+    background-color: cyan;
+    color: black;
+  }
+}
+ 
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+  .gfg-div {
+    width: 400px;
+    height: 200px;
+    background-color: chartreuse;
+    color: black;
+  }
+}
+ 
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .gfg-div {
+    width: 400px;
+    height: 400px;
+    background-color: brown;
+    color: black;
+  }
+}
+ 
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .gfg-div {
+    width: 400px;
+    height: 400px;
+    background-color: cornflowerblue;
+    color: black;
+  }
+}
+ 
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px)
+and (-webkit-min-device-pixel-ratio: 3) {
+  .gfg-div {
+    width: 400px;
+    height: 400px;
+    background-color: darkgoldenrod;
+    color: black;
+  }
 }
