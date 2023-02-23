@@ -1,33 +1,39 @@
 .App {
   text-align: center;
 }
-body{
-  background-color: black;
-  color: white;
+
+body {
+  /* background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.itl.cat%2Fpngfile%2Fbig%2F289-2892779_white-ferris-wheel-under-white-cloudy-blue-sky.jpg&f=1&nofb=1&ipt=682cd9660da3e961856d94c4e7656166c6a1c5ed61f9519076159d95434b5975&ipo=images'); */
+  background-image: url('https://images.unsplash.com/photo-1542928849-9feeeb1e65ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGFtdXNlbWVudCUyMHBhcmslMjBuaWdodHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60');
+  background-size: cover;
 }
 nav{
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
   overflow: hidden;
   margin-bottom: 1.5rem;
   /* border-bottom: 2px solid rgba(233, 204, 44, 0.3); */
 }
 nav a{
   float: right;
-  color: #08e5ed;
+  color: #9069c7;
   text-align: center;
   padding: 0 10px;
   text-decoration: none;
   font-size: 1.5rem;
-  margin-top: 20px;
+  margin: 30px 5px 0 0;
   font-family: 'Scope One', serif;
 }
 
 nav .logo{
   float: left;
-  color: #e2970c;
-  margin-left: 1rem;
+  color: #e9e7e3;
+  /* margin-left: 1rem; */
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.3rem;
+  width: 25%;
   
 }
+
 
 /* Card Styling (brand and sneaker) */
 
@@ -46,7 +52,7 @@ nav .logo{
 
 .card:hover {
   opacity: 0.9;
-  box-shadow: 0px 30px 35px rgba(218, 164, 15)
+  box-shadow: 0px 30px 35px rgb(214, 142, 193)
 }
 
 .card .img-wrapper {
@@ -70,3 +76,79 @@ nav .logo{
 }
 
 /* Card Styling (brand and sneaker) */
+
+.details-container{
+  width: 100vw;
+  height: 100vh;
+  /* margin: 1rem 1rem 4rem 1rem; */
+  display: grid;
+}
+
+.parkName {
+  color: rgb(241, 236, 237);
+  font-size: 40px;
+}
+.location {
+  color: rgb(13, 13, 14);
+  font-size: 30px;
+}
+.park-img {
+  border: 10px solid rgb(199, 134, 210);
+  width: 600px;
+  margin: auto;
+  background-color: rgb(249, 215, 220);
+}
+.description {
+  background-color: rgba(147, 145, 140, 0.6);
+  color: rgb(251, 251, 251);
+  font-size: 25px;
+  width: 75%;
+  margin: 3rem 0 1rem 10rem;
+  padding: 1rem;
+}
+.price {
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+}
+.review-title{
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+.review-container{
+  background-color: rgba(147, 145, 140, 0.4);
+  width: 75%;
+  margin: 1rem 0 1rem 10rem;
+  padding: 1rem 0 3rem 0;
+  /* display: grid; */
+}
+.reviews span{
+  color: rgb(124, 11, 238);
+  font-size: 1.5rem;
+  /* font-size: 1rem; */
+}
+.reviews{
+  /* display: grid; */
+}
+.all-reviews{
+  grid-row: 2 / span 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 7rem;
+  width: 80%;
+  text-align: center;
+  font-size: 20px;
+}
+.delete-button{
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid rgb(13, 160, 228);
+  border-radius: 5px;
+  color: rgb(171, 73, 213);
+  font-weight: bold;
+  cursor: pointer;
+}
+input{
+  width:30%;
+  height: 20%;
+}

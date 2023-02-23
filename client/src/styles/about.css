@@ -1,0 +1,16 @@
+.about-heading{
+  font-family: 'Satisfy', cursive;
+  font-size: 6rem;
+  padding: 1rem;
+
+}
+.cont{
+  display: grid;
+  justify-content: center;
+}
+.about-container{
+  background-color: rgba(147, 145, 140, 0.4);
+  width: 80%;
+  height: auto;
+  margin-left: 8rem;
+}

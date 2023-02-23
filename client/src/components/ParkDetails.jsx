@@ -50,26 +50,33 @@ const ParkDetails = (props) => {
   
   
   return park ? (
-    <div className='container'>
+    <div className='details-container'>
       <div className='details'>
-        <h1>{park.name}</h1>
-        <h3>{park.location}</h3>
-        <img alt='park img' src={park.image} />
-        <p>Description: {park.description}</p>
-        <h5>Price: {park.price}</h5>
-       <h3>Reviews</h3>
-       <section>
-        {park.review.map((rev) => 
-          <p>{rev.comment} {rev.rating} <button className='delete-button' onClick={() => handleReviewDelete(rev._id)}>x</button></p>
+        <h1 className='parkName'>{park.name}</h1>
+        <h3 className='location'>{park.location}</h3>
+        <img className="park-img" alt='park img' src={park.image} />
+        <div></div>
+        <p className='description'>Description: {park.description}</p>
+        <h5 className='price'>Price: {park.price}</h5>
+        <div className='review-container'>
+          <h3 className='review-title'>Reviews</h3>
+          <section>
+          <div className='reviews'>
+            {park.review.map((rev) => 
+              <div className='all-reviews'>
+                <p><span>Review: </span>{rev.comment} <span> <br />Rating: </span> {rev.rating} <button className='delete-button' onClick={() => handleReviewDelete(rev._id)}>x</button></p>
+              </div>
+              
+            )}
+          </div>
+              <ReviewForm
+                handleSubmit={handleReviewSubmit}
+                handleChange={handleReviewChange}
+                review={review}
+              />
           
-         )}
-          <ReviewForm
-            handleSubmit={handleReviewSubmit}
-            handleChange={handleReviewChange}
-            review={review}
-          />
-         
-       </section>
+          </section>
+       </div>
       </div>
     </div>
   ) : null
