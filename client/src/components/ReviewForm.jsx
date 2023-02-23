@@ -39,7 +39,7 @@ const ReviewForm = ({handleChange, handleSubmit, review}) => {
           value={review.rating}
         />
 
-        <button type="submit">Edit Recipe</button>
+        <button type="submit">Post</button>
       </form>
 
     </div>

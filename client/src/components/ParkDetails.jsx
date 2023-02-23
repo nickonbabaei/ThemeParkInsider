@@ -42,6 +42,11 @@ const ParkDetails = (props) => {
     getParkById()
   }
 
+  const handleReviewDelete = async (reviewId) => {
+    await axios.delete(`http://localhost:3001/api/deleteReview/${reviewId}`)
+    getParkById()
+  }
+
   
   
   
@@ -56,7 +61,8 @@ const ParkDetails = (props) => {
        <h3>Reviews</h3>
        <section>
         {park.review.map((rev) => 
-          <p>{rev.comment}</p>
+          <p>{rev.comment} {rev.rating} <button className='delete-button' onClick={() => handleReviewDelete(rev._id)}>x</button></p>
+          
          )}
           <ReviewForm
             handleSubmit={handleReviewSubmit}
