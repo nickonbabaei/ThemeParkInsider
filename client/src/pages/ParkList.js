@@ -13,7 +13,6 @@ const ParkList = () => {
         const getParks = async () => {
             const response = await axios.get(`http://localhost:3001/api/themeParks`)
             setParks(response.data.parks)
-            // console.log(response.data.parks)
         }
         getParks()
     }, [])

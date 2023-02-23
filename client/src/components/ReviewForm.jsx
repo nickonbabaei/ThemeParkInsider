@@ -1,20 +1,4 @@
-import { useState } from "react"
-// import axios from "axios"
-// import { useNavigate, useParams } from "react-router-dom"
-
 const ReviewForm = ({handleChange, handleSubmit, review}) => {
-
-//   const initialState = {
-//     comment: '',
-//     rating: ''
-//   }
-
-//   const [review, setReview] = useState(initialState)
-
-//   const handleReviewChange = (evt) => {
-//     setReview({ ...review, [evt.target.id]: evt.target.value })
-//   }
-
   
   return (
     <div className="review-form">

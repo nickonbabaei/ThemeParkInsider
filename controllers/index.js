@@ -49,48 +49,12 @@ const getReviewById = async (req, res) => {
   }
 }
 
-
-// const getParkByID = async (req, res) => {
-//     try {
-//         const parkID = req.params.id
-//         const park = await ThemePark.findById(parkID).populate('review')
-//         return res.status(200).json({ park })
-//     } catch (err) {
-//         res.status(500).send(err.message)
-//     }
-// }
-
-
-// const createReview = async (req, res) => {
-//   try {
-//     console.log(req.body)
-//     const review = await new Review(req.body)
-//     await review.save()
-//     if (req.body.themePark) {
-//       const themePark = await ThemePark.findById(req.body.themePark)
-//       themePark.review.push(review._id)
-//       await themePark.save()
-//     }
-
-//     return res.status(201).json({
-//       review,
-//     })
-//   } catch (error) {
-//     return res.status(500).json({error: error.message})
-//   }
-// }
-
-
-
-// Nickon
 const createReview = async (req, res) => {
     try {
       const parkID = req.params.id
       const review = await new Review(req.body)
       await review.save()
       const park = await ThemePark.findById(parkID)
-      // console.log(review)
-      // console.log(park.review)
       park.review.push(review._id)
       await ThemePark.findByIdAndUpdate(parkID, park)
       return res.status(201).json({ review })
@@ -98,10 +62,6 @@ const createReview = async (req, res) => {
       return res.status(500).json(err.message)
     }
   }
-
-
-
-
 
   const deleteReview = async (req, res) => {
     try {
@@ -115,12 +75,6 @@ const createReview = async (req, res) => {
       return res.status(500).send(err.message)
     }
   }
-
-
-
-
-
-
 
 module.exports = {
     createReview,
