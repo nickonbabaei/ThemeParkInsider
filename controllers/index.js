@@ -1,7 +1,5 @@
 const { ThemePark, Review } = require('../models')
 
-
-  
 const createThemePark = async (req, res) => {
     try {
         const themePark = await new ThemePark(req.body)

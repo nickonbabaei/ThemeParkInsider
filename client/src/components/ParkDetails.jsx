@@ -17,7 +17,7 @@ const ParkDetails = (props) => {
   let { id } = useParams()
 
   const getParkById = async () => {
-    const response = await axios.get(`http://localhost:3001/api/themeParks/${id}`)
+    const response = await axios.get(`/api/themeParks/${id}`)
     setPark(response.data.themePark)
   }
 
@@ -31,13 +31,13 @@ const ParkDetails = (props) => {
 
   const handleReviewSubmit = async (evt) => {
     evt.preventDefault()
-    await axios.post(`http://localhost:3001/api/themePark/${id}/review`, review)
+    await axios.post(`/api/themePark/${id}/review`, review)
     setReview(initialState)
     getParkById()
   }
 
   const handleReviewDelete = async (reviewId) => {
-    await axios.delete(`http://localhost:3001/api/deleteReview/${reviewId}`)
+    await axios.delete(`/api/deleteReview/${reviewId}`)
     getParkById()
   }
 
